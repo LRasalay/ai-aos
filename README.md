@@ -28,7 +28,7 @@ ai-os-template/
 │  └─ commands/run.md
 ├─ ai-cli                  ← CLI for running AI tasks
 └─ AI_OS_Setup.md          ← instructions
-
+```mermaid
 graph LR
 A[Developer runs ai-cli] --> B[Tool Wrapper (.claude/.windsurf)]
 B --> C[Compose.md orchestrator]
@@ -37,7 +37,7 @@ C --> E[Task Templates (ai/tasks)]
 C --> F[Tool Profile (ai/profiles)]
 D & E & F --> G[AI Tool executes task]
 G --> H[Output returned to developer]
-
+```
 ⚡ Quick Setup
 
 Clone repository
@@ -70,7 +70,7 @@ Run AI tasks
 # Code review with Windsurf
 ./ai-cli run review windsurf "Refactor authentication module"
 📌 Prompt Flow Diagram
-
+```mermaid
 flowchart TD
 subgraph AI_Prompts
 CR[Core Rules] --> COMP[Compose.md]
@@ -79,7 +79,7 @@ PR[Profile (Claude/Windsurf)] --> COMP
 end
 COMP --> TOOL[AI Tool Execution]
 TOOL --> DEV[Developer Output]
-
+```
 📝 AI Prompt Examples
 
 Core Rules (ai/core/rules.md)
