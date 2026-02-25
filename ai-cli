@@ -1,0 +1,19 @@
+#!/bin/bash
+COMMAND=\$1
+TASK=\$2
+TOOL=\$3
+FEATURE="\$4"
+
+if [[ "\$COMMAND" != "run" ]]; then
+    echo "Usage: ./ai-cli run <task> <tool> \"<feature description>\""
+    exit 1
+fi
+
+if [[ "\$TOOL" == "claude" ]]; then
+    claude run --file .claude/commands/run.md --task "\$TASK" --feature "\$FEATURE"
+elif [[ "\$TOOL" == "windsurf" ]]; then
+    windsurf run --file .windsurf/commands/run.md --task "\$TASK" --feature "\$FEATURE"
+else
+    echo "Unknown tool \$TOOL"
+    exit 1
+fi
