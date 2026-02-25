@@ -28,6 +28,9 @@ ai-os-template/
 │  └─ commands/run.md
 ├─ ai-cli                  ← CLI for running AI tasks
 └─ AI_OS_Setup.md          ← instructions
+
+<img width="733" height="410" alt="image" src="https://github.com/user-attachments/assets/d154800a-1a36-48f5-a426-e3d974577364" />
+
 ```mermaid
 graph LR
 A[Developer runs ai-cli] --> B[Tool Wrapper (.claude/.windsurf)]
